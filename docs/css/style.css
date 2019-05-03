@@ -218,9 +218,10 @@ html, body {
   padding: 64px 16px;
 }
 
-.section.white h2 {
+.section.white h1, .section.white h2 {
   color: #aa165f;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .section.white .tabella_banner {
