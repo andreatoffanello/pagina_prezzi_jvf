@@ -1,0 +1,260 @@
+//
+
+$main: #aa165f;
+$white: #ffffff;
+$text: #323232;
+
+html, body {
+	font-family: Roboto, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+.navbar {
+	padding: 0 32px;
+    height: 65px;
+    border-bottom: 1px solid #f8f8f8;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left center right";
+    align-items: center;
+
+    @media only screen and (max-width: 1024px){
+    	padding: 0 16px;
+	}
+
+    .ico_menu_new {
+		font-size: 22px;
+    }
+
+
+    .logo_sito_new {
+	    background: url(../images/JVFlogo_stretto.svg) no-repeat;
+	    height: calc(100% - 32px);
+	    width:  100%;
+	    background-size: contain;
+	    background-position: center center;
+	    place-self: center;
+	}
+
+	.link {
+		justify-self: end;
+
+		@media only screen and (max-width: 1024px){
+	    	display: none;
+		}
+
+		a {
+			font-size: 13px;
+			text-decoration: none;
+			color: $text;
+			margin-left: 32px;
+		}
+	}
+}
+
+.footer {
+    background: #f0f0f0;
+    padding: 64px 0;
+    
+    .footer_content {
+
+    }
+}
+
+
+// ===================================================
+
+.heading {
+	background: $main;
+	padding: 32px;
+
+	h1 {
+		margin: 0;
+		color: $white;
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		text-transform: uppercase;
+	}
+}
+
+.section.bkg {
+	padding-top: 128px;
+	padding-bottom: 96px;
+	background: url(../images/img.jpg);
+	background-size: cover;
+    background-position: center center;
+
+    @media only screen and (max-width: 1024px){
+    	padding-top: 96px;
+		padding-left: 48px;
+		padding-right: 16px;
+	}
+}
+
+.service_grid {
+	display: grid;
+	width: auto;
+	max-width: 960px;
+	grid-gap: 64px;
+	margin: 0 auto;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+
+	@media only screen and (max-width: 1024px){
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto;
+	}
+
+	.service_box {
+		background: $white;
+		height: min-content;
+		box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+		.box_title {
+			background: $main;
+			color: $white;
+			padding: 16px 16px 32px 16px;
+			-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+			clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+			left: -32px;
+			top: -32px;
+			position: relative;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+			h3 {
+				margin: 0;
+			}
+
+			p {
+				text-align: right;
+				margin: 0;
+				font-style: italic;
+			}
+		}
+	}
+
+	.box_content {
+		color: $text;
+		padding: 0 32px 32px 32px;
+
+		p {
+			opacity: .5;
+			margin: 0;
+			text-align: center;
+		}
+
+		h4 {
+			color: $main;
+			font-weight: 400;
+		}
+	}
+}
+
+.content {
+	width: 960px;
+	margin: 0 auto;
+}
+
+.section.color {
+	background: $main;
+	padding: 64px 0;
+
+	.section_head {
+		width: auto;
+		max-width: 960px;
+		margin: 0 auto;
+		padding-bottom: 64px;
+
+		@media only screen and (max-width: 1024px){
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+	}
+
+	h2 {
+		margin: 0;
+		color: $white;
+	}
+}
+
+.servicelist_grid {
+	display: grid;
+	grid-gap: 32px 32px;
+	width: auto;
+	max-width: 960px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin: 0 auto;
+	padding: 0 16px;
+
+	@media only screen and (max-width: 1024px){
+		grid-template-columns: 1fr;
+	}
+
+	.service {
+		color: $white;
+		padding: 24px;
+		background: $text;
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	li {
+		font-style: italic;
+	}
+}
+
+.section.white {
+	width: auto;
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 64px 16px;
+
+	h2 {
+		color: $main;
+		text-transform: uppercase;
+
+	}
+
+	.tabella_banner {
+		margin: 32px 0;
+		width: auto;
+
+		.tab_row {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			border-bottom: 1px solid rgba(0,0,0,.1);
+
+			@media only screen and (max-width: 1024px){
+				grid-template-columns: 1fr;
+				margin-bottom: 32px;
+			}
+		}
+
+		.tab_head {
+			@media only screen and (max-width: 1024px){
+				display: none;
+			}
+		}
+		
+		h4 {
+			color: $main;
+			text-transform: uppercase;
+
+		}
+
+		p {
+			color: $text;
+
+			@media only screen and (max-width: 1024px){
+				margin-top: 8px;
+				margin-bottom: 8px;
+			}
+		}
+	}
+}
+
+
